@@ -2,18 +2,18 @@
   "analyticsCode": "",
   "pageLayout": "two-column",
   "basics": {
-    "name": "MiraHikari",
-    "label": "Senior Full Stack Developer",
+    "name": "Md. Latiful Kabir",
+    "label": "Software Engineer",
     "image": "/avatar.png",
-    "email": "mirahikari@gcxstudio.cn",
+    "email": "latifulkabir567@gmail.com",
     "url": "https://www.gcxstudio.cn",
     "summary": "Born in 2010, I primarily work with TypeScript and JavaScript for full-stack development, and enjoy working with various technologies.",
     "theme": "red",
     "location": {
-      "address": "Nanchang",
-      "city": "Jiangxi Province",
-      "countryCode": "CN",
-      "region": "China"
+      "address": "Nikunja-2, Khilkhet",
+      "city": "Dhaka",
+      "countryCode": "BD",
+      "region": "Bangladesh"
     },
     "profiles": [
       {
@@ -34,11 +34,7 @@
         "username": "MiraHikari",
         "url": "https://github.com/MiraHikari"
       }
-    ],
-    "beian": {
-      "mint": "赣ICP备2021005460号-1",
-      "police": "赣公网安备 36010302000349号"
-    }
+    ]
   },
   "images": {
     "intro": "Photography is the art of light, and images are the contours of memory.",
@@ -67,12 +63,58 @@
   },
   "education": [
     {
-      "institution": "Nanchang No.27 Middle School",
+      "institution": "Daffodil International University",
       "url": "",
-      "area": "Regular Student",
-      "studyType": "Full-time student",
-      "startDate": "2021-9-01",
-      "endDate": null
+      "area": "Computer Science",
+      "studyType": "(BSC in CSE)",
+      "startDate": "2016-9-01",
+      "endDate": "2020-9-01",
+      "courses": [
+        "Data Structures",
+        "Operating Systems",
+        "Computer Networks",
+        "Database Systems",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Software Engineering",
+        "Theory of Computation",
+        "Discrete Mathematics",
+        "Algorithms and Complexity",
+        "Computer Architecture",
+        "Computer Graphics",
+        "Web Development",
+        "Mobile Application Development",
+        "Cloud Computing",
+        "Internet of Things (IoT)",
+        "Cybersecurity",
+        "Human-Computer Interaction (HCI)",
+        "Data Science",
+        "Big Data Analytics",
+        "Parallel and Distributed Systems",
+        "Embedded Systems",
+        "Computer Vision",
+        "Natural Language Processing (NLP)",
+        "Robotics",
+        "Augmented Reality (AR) and Virtual Reality (VR)",
+        "Game Development",
+        "Network Security"
+      ]
+    },
+    {
+      "institution": "BAF Shaheen College, Tejgaon, Dhaka",
+      "url": "",
+      "area": "Science",
+      "studyType": "HSC (Higher Secondary Certificate)",
+      "startDate": "2013-06-1",
+      "endDate": "2015-06-1"
+    },
+    {
+      "institution": "Jan-E-Alam Sarker High School",
+      "url": "",
+      "area": "Science",
+      "studyType": "SSC (Secondary School Certificate)",
+      "startDate": "2003-01-01",
+      "endDate": "2013-01-01"
     }
   ],
   "certificates": [
@@ -472,7 +514,7 @@
   ],
   "languages": [
     {
-      "language": "Chinese",
+      "language": "Bangla",
       "fluency": "Native speaker"
     },
     {
