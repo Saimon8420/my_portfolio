@@ -7,7 +7,7 @@
     "image": "/avatar.jpg",
     "email": "latifulkabir567@gmail.com",
     "url": "https://www.gcxstudio.cn",
-    "summary": "Born in 2010, I primarily work with TypeScript and JavaScript for full-stack development, and enjoy working with various technologies.",
+    "summary": "I am a versatile software developer with expertise in a wide range of technologies, including JavaScript, Node.js, Bun.js, Express, Elysia.js, Python, and various databases such as MongoDB, MySQL, and PostgreSQL. I specialize in frontend and backend development using frameworks like React, Next.js, and Astro, combined with modern UI libraries such as Tailwind, ShadCN, Daisy UI, Material UI, and Chakra UI.My experience extends to authentication systems like Clerk Auth, JWT, OAuth, and Google Auth, along with database ORM tools like Drizzle, Mongoose, and Prisma. Additionally, I work with cloud storage solutions like MinIO and have hands-on experience with Git, GitHub, and Docker.My programming journey started with C, followed by Java, and I am currently expanding my skill set by learning Rust and Go. With the ability to switch between multiple tech stacks seamlessly, I am always eager to take on new challenges and build scalable, high-performance applications.Let's create something amazing together! 🚀",
     "theme": "red",
     "location": {
       "address": "Nikunja-2, Khilkhet",
@@ -131,22 +131,22 @@
   ],
   "work": [
     {
-      "name": "Sgguo Development Team",
-      "position": "Full-stack Developer",
-      "location_type": "Remote",
-      "location": "CN",
+      "name": "Ads Pillar",
+      "position": "Software Developer",
+      "location_type": "Onsite",
+      "location": "Dhaka",
       "url": "https://github.com/Sgguo-Development-Team",
-      "startDate": "2022-06-01",
+      "startDate": "2024-02-01",
       "endDate": null,
       "summary": "Developing high-availability full-stack projects.",
       "highlights": [
         "Enhanced internal workflow efficiency by 30%."
       ],
       "responsibilities": [
-        "Developed and maintained backend services using Node.js and Golang."
+        "Developed and maintained backend services using Node.js,React.js,Bun.js and Python."
       ],
       "achievements": [
-        "Implemented a cloud drive and verification code system."
+        "Implemented and build a full-stack canvas project, based on fabric.js and html canvas element. Basically it's a graphics designing tool similar to canva."
       ],
       "skills": {
         "PHP": "simple-icons:php",
@@ -531,7 +531,7 @@
   ],
   "references": [
     {
-      "name": "MiraHikari",
+      "name": "Md. Latiful Kabir",
       "reference": "Reference…"
     }
   ],
