@@ -6,8 +6,8 @@
     "label": "Software Engineer",
     "image": "/avatar.jpg",
     "email": "latifulkabir567@gmail.com",
-    "url": "https://www.gcxstudio.cn",
-    "summary": "I am a versatile software developer with expertise in a wide range of technologies, including JavaScript, Node.js, Bun.js, Express, Elysia.js, Python, and various databases such as MongoDB, MySQL, and PostgreSQL. I specialize in frontend and backend development using frameworks like React, Next.js, and Astro, combined with modern UI libraries such as Tailwind, ShadCN, Daisy UI, Material UI, and Chakra UI.My experience extends to authentication systems like Clerk Auth, JWT, OAuth, and Google Auth, along with database ORM tools like Drizzle, Mongoose, and Prisma. Additionally, I work with cloud storage solutions like MinIO and have hands-on experience with Git, GitHub, and Docker.My programming journey started with C, followed by Java, and I am currently expanding my skill set by learning Rust and Go. With the ability to switch between multiple tech stacks seamlessly, I am always eager to take on new challenges and build scalable, high-performance applications.Let's create something amazing together! 🚀",
+    "url": "",
+    "summary": "Full-stack Software Engineer with extensive experience in modern web technologies, including JavaScript, TypeScript, Node.js, Bun.js, Express, Elysia.js, Python, and GraphQL. I specialize in creating scalable applications using frameworks such as React, Next.js, Astro, Vue.js, and Node.js, combined with UI libraries including Tailwind CSS, ShadCN, Daisy UI, Material UI, and Chakra UI. My expertise encompasses authentication systems (Clerk, JWT, OAuth, Google Auth), database management (MongoDB, MySQL, PostgreSQL), and ORM tools (Drizzle, Mongoose, Prisma). I have hands-on experience with cloud platforms, containerization (Docker), and version control systems. Starting my journey with C and Java, I continue to expand my skillset with Rust and Go. My passion lies in building efficient, user-centric solutions that address real-world challenges.",
     "theme": "red",
     "location": {
       "address": "Nikunja-2, Khilkhet",
@@ -16,498 +16,302 @@
       "region": "Bangladesh"
     },
     "contact": {
-      "phone1": "+8801521-333567",
-      "phone2": "+8801957-009796"
+      "phone1": "+8801521333567",
+      "phone2": ""
     },
     "profiles": [
       {
-        "network": "Mail",
-        "icon": "ri:bilibili-line",
-        "username": "Md. Latiful Kabir",
-        "url": "latifulkabir567@gmail.com"
+        "network": "Email",
+        "icon": "mdi:email",
+        "username": "latifulkabir567@gmail.com",
+        "url": "mailto:latifulkabir567@gmail.com"
       },
       {
         "network": "GitHub",
         "icon": "mdi:github",
-        "username": "MiraHikari",
+        "username": "Saimon8420",
         "url": "https://github.com/Saimon8420"
-      }
-    ]
-  },
-  "images": {
-    "intro": "Photography is the art of light, and images are the contours of memory.",
-    "list": [
-      {
-        "image": "https://i0.hdslb.com/bfs/article/6720a7355fd11b9666e2716cadf04e45480025691.jpg@90q_1e_1c.webp",
-        "alt": "Sunset in Nanchang",
-        "desc": "Shot on a sunny day in Nanchang. 2024.10.05"
       },
       {
-        "image": "https://i0.hdslb.com/bfs/article/82f680f56532d942f74d86801abf49ea480025691.jpg@90q_1e_1c.webp",
-        "alt": "My Cat",
-        "desc": "A Ragdoll cat who stayed for a year. She's a girl."
-      },
-      {
-        "image": "https://i0.hdslb.com/bfs/article/14e6ae3c368b0eddeeb2b5c338239486480025691.jpg@90q_1e_1c.webp",
-        "alt": "Emoji",
-        "desc": "True, dude"
-      },
-      {
-        "image": "https://i0.hdslb.com/bfs/article/fe1737e9d7b6c2b21eedaf60b6dc9f86480025691.jpg@90q_1e_1c.webp",
-        "alt": "Cat Kernel Crashed",
-        "desc": "Cat Kernel Crashed"
+        "network": "LinkedIn",
+        "icon": "mdi:linkedin",
+        "username": "Md. Latiful Kabir",
+        "url": "https://www.linkedin.com/in/md-latiful-kabir"
       }
     ]
   },
   "education": [
     {
       "institution": "Daffodil International University",
-      "url": "",
-      "area": "Computer Science",
-      "studyType": "(BSC in CSE)",
-      "startDate": "2016-9-01",
-      "endDate": "2020-9-01",
-      "courses": [
-        "Data Structures",
-        "Operating Systems",
-        "Computer Networks",
-        "Database Systems",
-        "Artificial Intelligence",
-        "Machine Learning",
-        "Software Engineering",
-        "Theory of Computation",
-        "Discrete Mathematics",
-        "Algorithms and Complexity",
-        "Computer Architecture",
-        "Computer Graphics",
-        "Web Development",
-        "Mobile Application Development",
-        "Cloud Computing",
-        "Internet of Things (IoT)",
-        "Cybersecurity",
-        "Human-Computer Interaction (HCI)",
-        "Data Science",
-        "Big Data Analytics",
-        "Parallel and Distributed Systems",
-        "Embedded Systems",
-        "Computer Vision",
-        "Natural Language Processing (NLP)",
-        "Robotics",
-        "Augmented Reality (AR) and Virtual Reality (VR)",
-        "Game Development",
-        "Network Security"
-      ]
+      "url": "https://www.daffodilvarsity.edu.bd",
+      "area": "Computer Science and Engineering",
+      "studyType": "B.Sc. in Computer Science and Engineering (CSE)",
+      "startDate": "2016",
+      "endDate": "2021"
     },
     {
-      "institution": "BAF Shaheen College, Tejgaon, Dhaka",
+      "institution": "BAF Shaheen College, Tejgaon",
       "url": "",
       "area": "Science",
-      "studyType": "HSC (Higher Secondary Certificate)",
-      "startDate": "2013-06-1",
-      "endDate": "2015-06-1"
+      "studyType": "Higher Secondary Certificate (Science)",
+      "startDate": "2013",
+      "endDate": "2015"
     },
     {
       "institution": "Jan-E-Alam Sarker High School",
       "url": "",
       "area": "Science",
-      "studyType": "SSC (Secondary School Certificate)",
-      "startDate": "2003-01-01",
-      "endDate": "2013-01-01"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Success has lived a day in the world.",
-      "date": "2010-04-14",
-      "url": "",
-      "issuer": "Myself"
-    },
-    {
-      "name": "TCCP - Senior Cloud Architecture Engineer",
-      "date": "2023-05-01",
-      "url": "",
-      "issuer": "Tencent Cloud"
+      "studyType": "Secondary School Certificate (Science)",
+      "startDate": "2002",
+      "endDate": "2013"
     }
   ],
   "work": [
     {
-      "name": "Ads Pillar",
-      "position": "Software Developer",
-      "location_type": "Onsite",
-      "location": "Dhaka",
-      "url": "https://github.com/Sgguo-Development-Team",
-      "startDate": "2024-02-01",
-      "endDate": null,
-      "summary": "Developing high-availability full-stack projects.",
+      "name": "Affpilot AI",
+      "position": "Full-Stack Developer (Front-End Focused)",
+      "url": "https://affpilot.com",
+      "startDate": "Mar 2024",
+      "endDate": "Present",
+      "summary": "Affpilot AI is an AI-powered content creation tool designed for bloggers and marketers to automate the generation of SEO-optimized articles, product reviews, and other content. Key features include bulk article generation (up to 1,000 articles in one click), auto-posting capabilities for WordPress and Blogger, and advanced SEO tools for keyword research and grouping. The platform offers specialized generators for various content types, such as Amazon review articles, biography articles, comparison articles, and informational articles. It also provides tools for content optimization like paragraph rewriting, sentence correction, and FAQ generation.",
       "highlights": [
-        "Enhanced internal workflow efficiency by 30%."
+        "Spearheading development of the Affpilot AI platform — an AI-powered content automation system with over 90,000+ global users.",
+        "Leading front-end initiatives using React.js, TypeScript, and Tailwind CSS, ensuring seamless scalability and performance.",
+        "Built interactive dashboards for bulk content generation, SEO automation, and one-click publishing to WordPress/Blogger.",
+        "Integrated RESTful APIs for content generation, keyword analysis, and real-time job tracking.",
+        "Collaborated cross-functionally for the AppSumo global launch, enhancing onboarding flow and multilingual UI/UX.",
+        "Improved code modularity and component reusability, reducing front-end code redundancy by 25%."
       ],
-      "responsibilities": [
-        "Developed and maintained backend services using Node.js,React.js,Bun.js and Python."
-      ],
-      "achievements": [
-        "Implemented and build a full-stack canvas project, based on fabric.js and html canvas element. Basically it's a graphics designing tool similar to canva."
-      ],
-      "skills": {
-        "PHP": "simple-icons:php",
-        "Node": "ri:nodejs-line",
-        "Golang": "simple-icons:go",
-        "Next.js": "ri:nextjs-fill",
-        "React": "mdi:react",
-        "SQL": "simple-icons:mysql",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
-        "NestJS": "simple-icons:nestjs",
-        "Vue": "mdi:vuejs"
-      }
+      "github": "LKabir567"
     },
     {
-      "name": "Riddle Town Team",
-      "position": "Full-stack Developer",
-      "location_type": "Remote",
-      "location": "CN",
-      "url": "https://rth2.gcxstudio.cn",
-      "startDate": "2023-01-01",
-      "endDate": "2024-02-11",
-      "summary": "Led page design and account systems.",
+      "name": "AdsPillar (PlanPost AI)",
+      "position": "Software Developer",
+      "url": "https://planpostai.com",
+      "startDate": "Jun 2023",
+      "endDate": "Feb 2024",
+      "summary": "PlanPost AI is an AI marketing assistant that helps users create content, ads, and manage SEO. It offers features such as generating 30 days of social media posts, ad copy, graphics, and videos in seconds. Key functionalities include a bulk social media post generator, a free online graphic design tool, an AI ad creative generator, and an AI agent chatbot for customer engagement. The platform aims to save time, reduce costs, and help businesses grow faster by streamlining content creation and ad campaign management.",
       "highlights": [
-        "Completed 95% of project content."
-      ],
-      "responsibilities": [
-        "Developed complete pages.",
-        "Integrated user-facing elements with server-side logic."
-      ],
-      "achievements": [
-        "Ensured smooth project execution."
-      ],
-      "skills": {
-        "HTML": "simple-icons:html5",
-        "CSS": "ri:css3-fill",
-        "JavaScript": "simple-icons:javascript",
-        "TypeScript": "simple-icons:typescript",
-        "Vite": "simple-icons:vite",
-        "Node": "ri:nodejs-line",
-        "Docker": "mdi:docker",
-        "WordPress": "ri:wordpress-fill",
-        "Astro": "simple-icons:astro",
-        "SQL": "simple-icons:mysql",
-        "Tailwind": "mdi:tailwind",
-        "React": "mdi:react",
-        "GitHub": "mdi:github",
-        "Git": "mdi:git"
-      }
+        "Contributed to PlanPost AI, an AI-driven social media content creation and scheduling platform.",
+        "Developed backend APIs with Python (FastAPI) and crafted responsive UIs using React.js.",
+        "Designed and launched Canvas, a manual graphics design tool inspired by Figma/Canva.",
+        "Integrated AI-assisted media rendering workflows and implemented scalable client-server communication models.",
+        "Enhanced backend performance, reducing API latency by 40%."
+      ]
+    },
+    {
+      "name": "AdsPillar",
+      "position": "Software Developer Intern",
+      "startDate": "Feb 2023",
+      "endDate": "May 2023",
+      "summary": "Supported full-stack development of internal projects using React.js, Node.js, and Python. Participated in Agile sprints, performed debugging, and contributed to QA testing pipelines. Assisted in integrating third-party APIs and improving code efficiency through refactoring.",
+      "highlights": [
+        "Supported full-stack development of internal projects using React.js, Node.js, and Python.",
+        "Participated in Agile sprints, performed debugging, and contributed to QA testing pipelines.",
+        "Assisted in integrating third-party APIs and improving code efficiency through refactoring."
+      ]
     }
   ],
   "skills": [
     {
-      "name": "HTML",
-      "icon": "simple-icons:html5",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
-    },
-    {
-      "name": "CSS",
-      "icon": "ri:css3-fill",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
-    },
-    {
       "name": "JavaScript",
-      "icon": "simple-icons:javascript",
-      "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Tailwind",
-      "icon": "mdi:tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
+      "level": "Expert"
     },
     {
       "name": "TypeScript",
-      "icon": "simple-icons:typescript",
-      "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
+      "level": "Expert"
     },
     {
-      "name": "Node",
-      "icon": "ri:nodejs-line",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
+      "name": "Python",
+      "level": "Expert"
     },
     {
-      "name": "SQL",
-      "icon": "simple-icons:mysql",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
+      "name": "Java",
+      "level": "Intermediate"
     },
     {
-      "name": "MongoDB",
-      "icon": "simple-icons:mongodb",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "File",
-        "Data Storage",
-        "Backend"
-      ]
+      "name": "C",
+      "level": "Intermediate"
     },
     {
-      "name": "Git",
-      "icon": "mdi:git",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "icon": "mdi:github",
-      "level": "Expert",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
+      "name": "React.js",
+      "level": "Expert"
     },
     {
       "name": "Next.js",
-      "icon": "ri:nextjs-line",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
+      "level": "Expert"
     },
     {
-      "name": "React",
-      "icon": "mdi:react",
-      "level": "Expert",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "name": "HTML5",
+      "level": "Expert"
     },
     {
-      "name": "Vue",
-      "icon": "mdi:vuejs",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
+      "name": "CSS3",
+      "level": "Expert"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": "Expert"
+    },
+    {
+      "name": "Material UI",
+      "level": "Expert"
+    },
+    {
+      "name": "Shadcn UI",
+      "level": "Expert"
+    },
+    {
+      "name": "Chakra UI",
+      "level": "Expert"
+    },
+    {
+      "name": "DaisyUI",
+      "level": "Expert"
+    },
+    {
+      "name": "Redux Toolkit",
+      "level": "Expert"
+    },
+    {
+      "name": "React Query",
+      "level": "Expert"
+    },
+    {
+      "name": "Zustand",
+      "level": "Expert"
+    },
+    {
+      "name": "Context API",
+      "level": "Expert"
+    },
+    {
+      "name": "Node.js",
+      "level": "Expert"
+    },
+    {
+      "name": "Express.js",
+      "level": "Expert"
+    },
+    {
+      "name": "Bun.js",
+      "level": "Expert"
+    },
+    {
+      "name": "Elysia.js",
+      "level": "Expert"
+    },
+    {
+      "name": "FastAPI",
+      "level": "Expert"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": "Expert"
+    },
+    {
+      "name": "MySQL",
+      "level": "Expert"
+    },
+    {
+      "name": "MongoDB",
+      "level": "Expert"
+    },
+    {
+      "name": "Supabase",
+      "level": "Expert"
+    },
+    {
+      "name": "Prisma",
+      "level": "Expert"
+    },
+    {
+      "name": "Drizzle ORM",
+      "level": "Expert"
+    },
+    {
+      "name": "Mongoose",
+      "level": "Expert"
+    },
+    {
+      "name": "JWT",
+      "level": "Expert"
+    },
+    {
+      "name": "OAuth 2.0",
+      "level": "Expert"
+    },
+    {
+      "name": "ClerkAuth",
+      "level": "Expert"
+    },
+    {
+      "name": "Passport.js",
+      "level": "Expert"
     },
     {
       "name": "Docker",
-      "icon": "mdi:docker",
-      "level": "Intermediate",
-      "keywords": [
-        "Virtual Environments",
-        "Backend"
-      ]
+      "level": "Expert"
     },
     {
-      "name": "NestJS",
-      "icon": "simple-icons:nestjs",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "IOC"
-      ]
-    },
-    {
-      "name": "Vite",
-      "icon": "simple-icons:vite",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Build Tool"
-      ]
-    },
-    {
-      "name": "WordPress",
-      "icon": "ri:wordpress-fill",
-      "level": "Intermediate",
-      "keywords": [
-        "PHP",
-        "Fullstack",
-        "Frontend"
-      ]
-    },
-    {
-      "name": "Golang",
-      "icon": "simple-icons:go",
-      "level": "Beginner",
-      "keywords": [
-        "Backend",
-        "Cloud Service"
-      ]
-    },
-    {
-      "name": "Astro",
-      "icon": "simple-icons:astro",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "PHP",
-      "icon": "simple-icons:php",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "Fullstack"
-      ]
-    },
-    {
-      "name": "Nginx",
-      "icon": "simple-icons:nginx",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "Web Server"
-      ]
-    },
-    {
-      "name": "Tauri",
-      "icon": "simple-icons:tauri",
-      "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Rust",
-        "Webview"
-      ]
-    },
-    {
-      "name": "Rust",
-      "icon": "simple-icons:rust",
-      "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Webview"
-      ]
-    },
-    {
-      "name": "Socket.IO",
-      "icon": "simple-icons:socketdotio",
-      "level": "Beginner",
-      "keywords": [
-        "Realtime",
-        "Websocket"
-      ]
-    },
-    {
-      "name": "Electron",
-      "icon": "simple-icons:electron",
-      "level": "Beginner",
-      "keywords": [
-        "Desktop App",
-        "Webview"
-      ]
-    },
-    {
-      "name": "Shell",
-      "icon": "simple-icons:shell",
-      "level": "Intermediate",
-      "keywords": [
-        "Scripting",
-        "Automation"
-      ]
-    },
-    {
-      "name": "Linux",
-      "icon": "simple-icons:linux",
-      "level": "Intermediate",
-      "keywords": [
-        "OS",
-        "Scripting",
-        "Automation"
-      ]
+      "name": "GitHub Actions",
+      "level": "Expert"
     },
     {
       "name": "Vercel",
-      "icon": "simple-icons:vercel",
-      "level": "Intermediate",
-      "keywords": [
-        "Serverless",
-        "Static Site Hosting"
-      ]
+      "level": "Expert"
     },
     {
-      "name": "Netlify",
-      "icon": "simple-icons:netlify",
-      "level": "Intermediate",
-      "keywords": [
-        "Serverless",
-        "Static Site Hosting"
-      ]
+      "name": "Railway",
+      "level": "Expert"
     },
     {
-      "name": "Tencent Cloud",
-      "icon": "simple-icons:tencentqq",
-      "level": "Intermediate",
-      "keywords": [
-        "Cloud Service"
-      ]
+      "name": "Render",
+      "level": "Expert"
     },
     {
-      "name": "Cloudflare Edge Functions",
-      "icon": "simple-icons:cloudflare",
-      "level": "Expert",
-      "keywords": [
-        "Serverless",
-        "Edge Computing"
-      ]
+      "name": "Firebase",
+      "level": "Expert"
+    },
+    {
+      "name": "Jest",
+      "level": "Expert"
+    },
+    {
+      "name": "React Testing Library",
+      "level": "Expert"
+    },
+    {
+      "name": "Postman",
+      "level": "Expert"
+    },
+    {
+      "name": "Git",
+      "level": "Expert"
+    },
+    {
+      "name": "GitHub",
+      "level": "Expert"
+    },
+    {
+      "name": "Figma",
+      "level": "Expert"
+    },
+    {
+      "name": "Notion",
+      "level": "Expert"
+    },
+    {
+      "name": "VS Code",
+      "level": "Expert"
+    },
+    {
+      "name": "Trello",
+      "level": "Expert"
+    },
+    {
+      "name": "Slack",
+      "level": "Expert"
     }
   ],
   "languages": [
@@ -522,53 +326,69 @@
   ],
   "interests": [
     {
-      "name": "Technology",
+      "name": "Open Source Development",
       "keywords": [
-        "AI",
+        "Contributing",
+        "Collaboration"
+      ]
+    },
+    {
+      "name": "Cloud Architecture",
+      "keywords": [
+        "Scalability",
+        "Efficiency"
+      ]
+    },
+    {
+      "name": "Emerging Technologies",
+      "keywords": [
+        "AI/ML",
+        "Web3",
         "Blockchain"
       ]
     }
   ],
   "references": [
     {
-      "name": "Md. Latiful Kabir",
-      "reference": "Reference…"
+      "name": "Available upon request",
+      "reference": "Professional references available upon request."
     }
   ],
   "projects": [
     {
-      "name": "Cloudflare Vmail",
-      "image": {
-        "url": "https://i0.hdslb.com/bfs/article/985e2caa8266dee4b9861ee6a341886d480025691.png@1e_1c.webp",
-        "position": "container",
-        "dark": "https://i0.hdslb.com/bfs/article/4d0bf8a784d22e54e3e61763c361c9ef480025691.png@100q_1e_1c.webp"
-      },
+      "name": "al-quran-client-site",
       "isActive": true,
-      "description": "An open source temporary email tool, fully on Cloudflare. Inspired by oiov/vmail",
-      "highlights": [
-        "🎯 Privacy-friendly, no registration required, out-of-the-box",
-        "✨ Support saving passwords and retrieving email addresses",
-        "😄 Support multiple domain name suffixes",
-        "🚀 100% open source, fully based on Cloudflare."
-      ],
-      "url": "https://what-the-fuck.sbs",
-      "github": "https://github.com/MiraHikari/cloudflare-vmail"
+      "description": "A web application for reading the Quran.",
+      "highlights": [],
+      "url": "https://github.com/Saimon8420/al-quran-client-site"
     },
     {
-      "name": "Riddle Town Hunt 2",
-      "image": {
-        "url": "https://rth2-webstatic.gbclstudio.cn/wp-content/uploads/2024/02/1707656250-76b2b0d2c94824e89a2b8b2c7d1c6afe.png",
-        "position": "background"
-      },
-      "isActive": false,
-      "description": "Public decryption activity in the form of Puzzle Hunt.",
-      "highlights": [
-        "👌 More than 1000 people participated, system runs normally",
-        "😮‍ Use headless CMS: WordPress to storage and manage contents, dynamically render page",
-        "😊 Windows-like interface",
-        "💕 Based on Astro"
-      ],
-      "url": "https://rth2.gcxstudio.cn/"
+      "name": "react_canvas",
+      "isActive": true,
+      "description": "A simple drawing application built with React.",
+      "highlights": [],
+      "url": "https://github.com/Saimon8420/react_canvas"
+    },
+    {
+      "name": "crowdFunding_FrontEnd",
+      "isActive": true,
+      "description": "Frontend development with reactjs and style with vanilla css.",
+      "highlights": [],
+      "url": "https://github.com/Saimon8420/crowdFunding_FrontEnd"
+    },
+    {
+      "name": "flowerShop",
+      "isActive": true,
+      "description": "frontend development with reactjs of a demo site, site name flowerShop.",
+      "highlights": [],
+      "url": "https://github.com/Saimon8420/flowerShop"
+    },
+    {
+      "name": "space_tourism_site_FrontEnd",
+      "isActive": true,
+      "description": "Frontend development with reactJs. Site name space_tourism.",
+      "highlights": [],
+      "url": "https://github.com/Saimon8420/space_tourism_site_FrontEnd"
     }
   ]
 }
