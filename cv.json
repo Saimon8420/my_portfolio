@@ -5,26 +5,26 @@
     "name": "Md. Latiful Kabir",
     "label": "Software Engineer",
     "image": "/avatar.jpg",
-    "email": "latifulkabir567@gmail.com",
+    "email": "latiful.dev@gmail.com",
     "url": "",
     "summary": "Full-stack Software Engineer with extensive experience in modern web technologies, including JavaScript, TypeScript, Node.js, Bun.js, Express, Elysia.js, Python, and GraphQL. I specialize in creating scalable applications using frameworks such as React, Next.js, Astro, Vue.js, and Node.js, combined with UI libraries including Tailwind CSS, ShadCN, Daisy UI, Material UI, and Chakra UI. My expertise encompasses authentication systems (Clerk, JWT, OAuth, Google Auth), database management (MongoDB, MySQL, PostgreSQL), and ORM tools (Drizzle, Mongoose, Prisma). I have hands-on experience with cloud platforms, containerization (Docker), and version control systems. Starting my journey with C and Java, I continue to expand my skillset with Rust and Go. My passion lies in building efficient, user-centric solutions that address real-world challenges.",
     "theme": "red",
     "location": {
-      "address": "Nikunja-2, Khilkhet",
+      "address": "Khilkhet",
       "city": "Dhaka",
       "countryCode": "BD",
       "region": "Bangladesh"
     },
     "contact": {
       "phone1": "+8801521333567",
-      "phone2": ""
+      "phone2": "+8801957009796"
     },
     "profiles": [
       {
         "network": "Email",
         "icon": "mdi:email",
-        "username": "latifulkabir567@gmail.com",
-        "url": "mailto:latifulkabir567@gmail.com"
+        "username": "latiful.dev@gmail.com",
+        "url": "mailto:latiful.dev@gmail.com"
       },
       {
         "network": "GitHub",
@@ -71,7 +71,7 @@
       "name": "Affpilot AI",
       "position": "Full-Stack Developer (Front-End Focused)",
       "url": "https://affpilot.com",
-      "startDate": "Mar 2024",
+      "startDate": "Mar 2025",
       "endDate": "Present",
       "summary": "Affpilot AI is an AI-powered content creation tool designed for bloggers and marketers to automate the generation of SEO-optimized articles, product reviews, and other content. Key features include bulk article generation (up to 1,000 articles in one click), auto-posting capabilities for WordPress and Blogger, and advanced SEO tools for keyword research and grouping. The platform offers specialized generators for various content types, such as Amazon review articles, biography articles, comparison articles, and informational articles. It also provides tools for content optimization like paragraph rewriting, sentence correction, and FAQ generation.",
       "highlights": [
@@ -88,7 +88,7 @@
       "name": "AdsPillar (PlanPost AI)",
       "position": "Software Developer",
       "url": "https://planpostai.com",
-      "startDate": "Jun 2023",
+      "startDate": "Jun 2024",
       "endDate": "Feb 2024",
       "summary": "PlanPost AI is an AI marketing assistant that helps users create content, ads, and manage SEO. It offers features such as generating 30 days of social media posts, ad copy, graphics, and videos in seconds. Key functionalities include a bulk social media post generator, a free online graphic design tool, an AI ad creative generator, and an AI agent chatbot for customer engagement. The platform aims to save time, reduce costs, and help businesses grow faster by streamlining content creation and ad campaign management.",
       "highlights": [
@@ -102,8 +102,8 @@
     {
       "name": "AdsPillar",
       "position": "Software Developer Intern",
-      "startDate": "Feb 2023",
-      "endDate": "May 2023",
+      "startDate": "Feb 2024",
+      "endDate": "May 2024",
       "summary": "Supported full-stack development of internal projects using React.js, Node.js, and Python. Participated in Agile sprints, performed debugging, and contributed to QA testing pipelines. Assisted in integrating third-party APIs and improving code efficiency through refactoring.",
       "highlights": [
         "Supported full-stack development of internal projects using React.js, Node.js, and Python.",
@@ -358,36 +358,61 @@
     {
       "name": "al-quran-client-site",
       "isActive": true,
-      "description": "A web application for reading the Quran.",
-      "highlights": [],
+      "description": "A web application for reading the Quran, with features like advanced search, multiple translations, audio recitations, and customizable themes.",
+      "highlights": [
+        "Comprehensive Browsing: Navigate the Quran by Surah, Juz, Hizb, Manzil, Ruku, Sajda, and Page.",
+        "Advanced Search: Quickly find verses with a powerful and intuitive search functionality.",
+        "Multiple Translations: Compare and understand verses with multiple translations side-by-side.",
+        "Audio Recitations: Listen to beautiful recitations of each verse.",
+        "Customizable Themes: Switch between light and dark modes for a comfortable reading experience.",
+        "Responsive Design: Enjoy a seamless experience on any device, from desktops to mobile phones.",
+        "Elegant UI: A clean and modern user interface built with Shadcn/ui and Tailwind CSS.",
+        "State Management: Efficient and predictable state management with Redux Toolkit."
+      ],
       "url": "https://github.com/Saimon8420/al-quran-client-site"
     },
     {
       "name": "react_canvas",
       "isActive": true,
-      "description": "A simple drawing application built with React.",
-      "highlights": [],
+      "description": "A feature-rich drawing and design tool built with React, inspired by Figma and Canva.",
+      "highlights": [
+        "Extensive collection of shapes: Basic shapes (rectangles, circles, triangles, polygons), Rounded shapes with customizable corners, Custom SVG shapes and icons, Text elements with over 40 font options, Rich icon library with various categories, Image upload and integration capabilities.",
+        "Full responsive behavior for desktop and mobile devices, Adaptive UI that adjusts to screen size, Touch and mouse interaction support, Optimized mobile experience with proper event handling, Panel auto-collapsing on small screens.",
+        "Layer management and object organization, Grouping and ungrouping of multiple objects, Object locking and selection tools, Canvas export functionality with multiple formats, Object duplication and cloning."
+      ],
       "url": "https://github.com/Saimon8420/react_canvas"
     },
     {
       "name": "crowdFunding_FrontEnd",
       "isActive": true,
-      "description": "Frontend development with reactjs and style with vanilla css.",
-      "highlights": [],
+      "description": "A front-end application for a crowdfunding platform, built with React and styled with vanilla CSS.",
+      "highlights": [
+        "Implemented a responsive and interactive user interface for browsing and supporting projects.",
+        "Developed components for displaying project details, contribution tiers, and progress bars.",
+        "Managed application state using React hooks and context API."
+      ],
       "url": "https://github.com/Saimon8420/crowdFunding_FrontEnd"
     },
     {
       "name": "flowerShop",
       "isActive": true,
-      "description": "frontend development with reactjs of a demo site, site name flowerShop.",
-      "highlights": [],
+      "description": "A front-end for a demo flower shop website, built with React.",
+      "highlights": [
+        "Designed and developed a visually appealing e-commerce interface for a flower shop.",
+        "Implemented features like product browsing, filtering, and a shopping cart.",
+        "Utilized React components for building a modular and reusable UI."
+      ],
       "url": "https://github.com/Saimon8420/flowerShop"
     },
     {
       "name": "space_tourism_site_FrontEnd",
       "isActive": true,
-      "description": "Frontend development with reactJs. Site name space_tourism.",
-      "highlights": [],
+      "description": "A front-end for a space tourism website, built with React.",
+      "highlights": [
+        "Created an immersive and engaging user experience for a conceptual space tourism website.",
+        "Developed interactive elements to showcase destinations, crew, and technology.",
+        "Implemented a responsive design that works on a variety of devices."
+      ],
       "url": "https://github.com/Saimon8420/space_tourism_site_FrontEnd"
     }
   ]
