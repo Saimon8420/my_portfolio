@@ -372,6 +372,22 @@
       "url": "https://github.com/Saimon8420/al-quran-client-site"
     },
     {
+  "name": "hadith_explorer",
+  "isActive": true,
+  "description": "A modern, fully responsive web application for exploring authentic Islamic Hadiths in Arabic, English, and Urdu.",
+  "highlights": [
+    "Access 9 major Hadith collections including Sahih Bukhari, Sahih Muslim, Jami' Al-Tirmidhi, Sunan Abu Dawood, Sunan Ibn-e-Majah, Sunan An-Nasa'i, Mishkat Al-Masabih, Musnad Ahmad, and Al-Silsila Sahiha.",
+    "Search Hadiths by text in English, Arabic, or Urdu with real-time results and pagination.",
+    "Filter by book collection and authenticity status (Sahih, Hasan, Da'eef).",
+    "Browse chapters within each book with multilingual chapter titles.",
+    "View complete Hadith texts and narrator chains in all supported languages with RTL support for Arabic and Urdu.",
+    "Fully Responsive Design: Optimized for mobile, tablet, and desktop with touch-friendly navigation.",
+    "Light & Dark Mode: Seamless theme switching with system preference detection and persistent user choice.",
+    "Clean & Elegant UI: Built with shadcn/ui, Tailwind CSS, and smooth transitions for an enhanced user experience."
+  ],
+  "url": "https://github.com/Saimon8420/hadith_explorer"
+},
+    {
       "name": "react_canvas",
       "isActive": true,
       "description": "A feature-rich drawing and design tool built with React, inspired by Figma and Canva.",
