@@ -68,11 +68,25 @@
   ],
   "work": [
     {
+      "name": "FlowGenX AI",
+      "position": "Software Engineer - Gen AI",
+      "url": "https://www.flowgenx.ai",
+      "startDate": "Dec 2025",
+      "endDate": "Present",
+      "summary": "FlowGenX AI is an agentic AI platform designed for enterprise integration and automation. The platform enables businesses to deploy intelligent AI agents that orchestrate complex workflows and integrate with various systems, featuring multi-agent coordination, universal API connectivity, knowledge base management, and enterprise-grade security.",
+      "highlights": [
+        "Building and developing connectors for third-party integrations including Google Sheets, Google Ads, Meta Ads, PayPal, Dropbox, Google Pub/Sub, Airtable, and more to enable seamless enterprise automation workflows.",
+        "Maintaining and enhancing the core platform built with Next.js, ensuring stability, performance, and scalability.",
+        "Identifying and resolving bugs and issues across the platform to improve reliability and user experience.",
+        "Implementing new features and enhancements to expand platform capabilities and meet evolving business requirements."
+      ]
+    },
+    {
       "name": "Affpilot AI",
       "position": "Full-Stack Developer (Front-End Focused)",
       "url": "https://affpilot.com",
       "startDate": "Mar 2025",
-      "endDate": "Present",
+      "endDate": "Dec 2025",
       "summary": "Affpilot AI is an AI-powered content creation tool designed for bloggers and marketers to automate the generation of SEO-optimized articles, product reviews, and other content. Key features include bulk article generation (up to 1,000 articles in one click), auto-posting capabilities for WordPress and Blogger, and advanced SEO tools for keyword research and grouping. The platform offers specialized generators for various content types, such as Amazon review articles, biography articles, comparison articles, and informational articles. It also provides tools for content optimization like paragraph rewriting, sentence correction, and FAQ generation.",
       "highlights": [
         "Spearheading development of the Affpilot AI platform — an AI-powered content automation system with over 90,000+ global users.",
@@ -387,6 +401,20 @@
   ],
   "url": "https://github.com/Saimon8420/hadith_explorer"
 },
+    {
+      "name": "islamic-prayer-times",
+      "isActive": true,
+      "description": "A comprehensive web application providing accurate Islamic prayer times, fasting schedules, Qibla direction, and Hijri calendar conversion for Muslims worldwide.",
+      "highlights": [
+        "Accurate prayer time calculations for Fajr, Sunrise, Dhuhr, Asr, Maghrib, and Isha with real-time countdown and progress indicators, supporting 12 different calculation methods and Shafi/Hanafi madhab options.",
+        "Fasting schedule with Sahur and Iftar times, countdown timers, fasting duration calculation, and Ramadan awareness features.",
+        "Qibla direction finder with precise calculation based on user location, interactive compass, and distance to Makkah.",
+        "Hijri calendar with Gregorian to Hijri date conversion, Arabic/English display, and White Days (Ayyam Al-Beed) tracker.",
+        "Privacy-focused design with all calculations performed locally on the device — no data sent to external servers.",
+        "Built with React 18, TypeScript, Vite, Tailwind CSS, Zustand, and Radix UI with Dark/Light/System theme support."
+      ],
+      "url": "https://github.com/Saimon8420/islamic-prayer-times"
+    },
     {
       "name": "react_canvas",
       "isActive": true,

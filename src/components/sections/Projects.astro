@@ -6,22 +6,23 @@ import { projects } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Projects">
-  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:flex print:flex-col">
     {
       projects.map(
         ({ url, description, highlights, name, isActive }) => {
           return (
             <div
               role="contentinfo"
+              data-expanded="false"
               class:list={[
-                "project-container grid-span-1 group relative flex min-h-80 flex-col overflow-hidden rounded-md bg-skin-button-muted/50 p-5 shadow-sm ring-1 ring-skin-muted",
+                "project-card grid-span-1 group relative flex flex-col overflow-hidden rounded-md bg-skin-button-muted/50 p-5 shadow-sm ring-1 ring-skin-muted",
               ]}
             >
               <div
-                class={`relative z-10 flex items-center justify-between space-x-[10px]`}
+                class="relative z-10 flex items-center justify-between space-x-[10px]"
               >
                 <div class="flex items-center gap-2">
-                  <Icon name="mdi:folder-outline" class="size-4" />
+                  <Icon name="mdi:folder-outline" class="size-4 shrink-0" />
                   <div class="flex items-center gap-[6px]">
                     {isActive ? (
                       <a
@@ -40,17 +41,27 @@ import { projects } from "@cv";
                     )}
                   </div>
                 </div>
-
               </div>
 
-              <p class={`relative z-10 py-3 text-sm text-skin-base`}>
-                {description}
-              </p>
-              <ul class={`relative z-10 mt-1 text-sm text-skin-inverted`}>
-                {highlights.map((highlight) => {
-                  return <li>{highlight}</li>;
-                })}
-              </ul>
+              <div class="project-details relative z-10 grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-data-[expanded=true]:grid-rows-[1fr]">
+                <div class="overflow-hidden">
+                  <p class="pt-3 pb-1 text-sm text-skin-base">
+                    {description}
+                  </p>
+                  {highlights.length > 0 && (
+                    <ul class="mt-1 text-sm text-skin-inverted">
+                      {highlights.map((highlight) => {
+                        return <li>{highlight}</li>;
+                      })}
+                    </ul>
+                  )}
+                </div>
+              </div>
+
+              <button class="project-toggle mt-3 flex w-fit cursor-pointer items-center gap-1.5 text-xs text-skin-muted underline transition-all hover:text-skin-base print:hidden">
+                <span class="toggle-text">See details</span>
+                <Icon name="ri:arrow-down-s-line" class="h-4 w-4 transition-transform duration-200 group-data-[expanded=true]:rotate-180" />
+              </button>
             </div>
           );
         },
@@ -58,9 +69,20 @@ import { projects } from "@cv";
     }
   </div>
 </Section>
+
 <script>
   import { Fancybox } from "@fancyapps/ui";
   Fancybox.bind('[data-fancybox="projects"]', { hideScrollbar: false });
+
+  document.querySelectorAll('.project-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest<HTMLElement>('.project-card')!;
+      const isExpanded = card.dataset.expanded === 'true';
+      card.dataset.expanded = isExpanded ? 'false' : 'true';
+      const text = button.querySelector('.toggle-text')!;
+      text.textContent = isExpanded ? 'See details' : 'Hide details';
+    });
+  });
 </script>
 
 <style>
@@ -69,21 +91,5 @@ import { projects } from "@cv";
     li {
       @apply text-skin-muted;
     }
-  }
-
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    font-size: 0.6rem;
-  }
-
-  footer span {
-    border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
-    padding: 0.2rem 0.6rem;
   }
 </style>
