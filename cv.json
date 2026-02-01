@@ -7,7 +7,7 @@
     "image": "/avatar.jpg",
     "email": "latiful.dev@gmail.com",
     "url": "",
-    "summary": "Full-stack Software Engineer with extensive experience in modern web technologies, including JavaScript, TypeScript, Node.js, Bun.js, Express, Elysia.js, Python, and GraphQL. I specialize in creating scalable applications using frameworks such as React, Next.js, Astro, Vue.js, and Node.js, combined with UI libraries including Tailwind CSS, ShadCN, Daisy UI, Material UI, and Chakra UI. My expertise encompasses authentication systems (Clerk, JWT, OAuth, Google Auth), database management (MongoDB, MySQL, PostgreSQL), and ORM tools (Drizzle, Mongoose, Prisma). I have hands-on experience with cloud platforms, containerization (Docker), and version control systems. Starting my journey with C and Java, I continue to expand my skillset with Rust and Go. My passion lies in building efficient, user-centric solutions that address real-world challenges.",
+    "summary": "I'm a full-stack software engineer who works across the JavaScript and Python ecosystems. Most of my day-to-day involves building with React, Next.js, and TypeScript on the frontend, and Node.js or FastAPI on the backend — depending on what the project calls for. I've spent a good amount of time working with authentication flows, particularly OAuth 2.0 and JWT-based systems, and I genuinely enjoy getting those right. On the data side, I work with PostgreSQL, MongoDB, and MySQL, usually through ORMs like Prisma or Drizzle. I've built products that serve tens of thousands of users, and more recently I've been working on AI-powered tools and third-party integrations. I started out writing C and Java, picked up the web stack along the way, and I'm currently exploring Rust and Go when I get the chance. I care about writing clean, practical code that actually solves problems — not just code that looks impressive.",
     "theme": "red",
     "location": {
       "address": "Khilkhet",
@@ -79,7 +79,9 @@
         "Maintaining and enhancing the core platform built with Next.js, ensuring stability, performance, and scalability.",
         "Identifying and resolving bugs and issues across the platform to improve reliability and user experience.",
         "Implementing new features and enhancements to expand platform capabilities and meet evolving business requirements."
-      ]
+      ],
+      "location": "San Francisco, California, United States",
+      "locationType": "Remote"
     },
     {
       "name": "Affpilot AI",
@@ -96,7 +98,9 @@
         "Collaborated cross-functionally for the AppSumo global launch, enhancing onboarding flow and multilingual UI/UX.",
         "Improved code modularity and component reusability, reducing front-end code redundancy by 25%."
       ],
-      "github": "LKabir567"
+      "github": "LKabir567",
+      "location": "DOHS, Mirpur-12, Dhaka, Bangladesh",
+      "locationType": "Onsite"
     },
     {
       "name": "AdsPillar (PlanPost AI)",
@@ -111,7 +115,9 @@
         "Designed and launched Canvas, a manual graphics design tool inspired by Figma/Canva.",
         "Integrated AI-assisted media rendering workflows and implemented scalable client-server communication models.",
         "Enhanced backend performance, reducing API latency by 40%."
-      ]
+      ],
+      "location": "Begum Rokeya Sarani, Mirpur, Dhaka, Bangladesh",
+      "locationType": "Onsite"
     },
     {
       "name": "AdsPillar",
@@ -123,7 +129,9 @@
         "Supported full-stack development of internal projects using React.js, Node.js, and Python.",
         "Participated in Agile sprints, performed debugging, and contributed to QA testing pipelines.",
         "Assisted in integrating third-party APIs and improving code efficiency through refactoring."
-      ]
+      ],
+      "location": "Begum Rokeya Sarani, Mirpur, Dhaka, Bangladesh",
+      "locationType": "Onsite"
     }
   ],
   "skills": [
@@ -341,25 +349,15 @@
   "interests": [
     {
       "name": "Open Source Development",
-      "keywords": [
-        "Contributing",
-        "Collaboration"
-      ]
+      "keywords": ["Contributing", "Collaboration"]
     },
     {
       "name": "Cloud Architecture",
-      "keywords": [
-        "Scalability",
-        "Efficiency"
-      ]
+      "keywords": ["Scalability", "Efficiency"]
     },
     {
       "name": "Emerging Technologies",
-      "keywords": [
-        "AI/ML",
-        "Web3",
-        "Blockchain"
-      ]
+      "keywords": ["AI/ML", "Web3", "Blockchain"]
     }
   ],
   "references": [
@@ -386,21 +384,21 @@
       "url": "https://github.com/Saimon8420/al-quran-client-site"
     },
     {
-  "name": "hadith_explorer",
-  "isActive": true,
-  "description": "A modern, fully responsive web application for exploring authentic Islamic Hadiths in Arabic, English, and Urdu.",
-  "highlights": [
-    "Access 9 major Hadith collections including Sahih Bukhari, Sahih Muslim, Jami' Al-Tirmidhi, Sunan Abu Dawood, Sunan Ibn-e-Majah, Sunan An-Nasa'i, Mishkat Al-Masabih, Musnad Ahmad, and Al-Silsila Sahiha.",
-    "Search Hadiths by text in English, Arabic, or Urdu with real-time results and pagination.",
-    "Filter by book collection and authenticity status (Sahih, Hasan, Da'eef).",
-    "Browse chapters within each book with multilingual chapter titles.",
-    "View complete Hadith texts and narrator chains in all supported languages with RTL support for Arabic and Urdu.",
-    "Fully Responsive Design: Optimized for mobile, tablet, and desktop with touch-friendly navigation.",
-    "Light & Dark Mode: Seamless theme switching with system preference detection and persistent user choice.",
-    "Clean & Elegant UI: Built with shadcn/ui, Tailwind CSS, and smooth transitions for an enhanced user experience."
-  ],
-  "url": "https://github.com/Saimon8420/hadith_explorer"
-},
+      "name": "hadith_explorer",
+      "isActive": true,
+      "description": "A modern, fully responsive web application for exploring authentic Islamic Hadiths in Arabic, English, and Urdu.",
+      "highlights": [
+        "Access 9 major Hadith collections including Sahih Bukhari, Sahih Muslim, Jami' Al-Tirmidhi, Sunan Abu Dawood, Sunan Ibn-e-Majah, Sunan An-Nasa'i, Mishkat Al-Masabih, Musnad Ahmad, and Al-Silsila Sahiha.",
+        "Search Hadiths by text in English, Arabic, or Urdu with real-time results and pagination.",
+        "Filter by book collection and authenticity status (Sahih, Hasan, Da'eef).",
+        "Browse chapters within each book with multilingual chapter titles.",
+        "View complete Hadith texts and narrator chains in all supported languages with RTL support for Arabic and Urdu.",
+        "Fully Responsive Design: Optimized for mobile, tablet, and desktop with touch-friendly navigation.",
+        "Light & Dark Mode: Seamless theme switching with system preference detection and persistent user choice.",
+        "Clean & Elegant UI: Built with shadcn/ui, Tailwind CSS, and smooth transitions for an enhanced user experience."
+      ],
+      "url": "https://github.com/Saimon8420/hadith_explorer"
+    },
     {
       "name": "islamic-prayer-times",
       "isActive": true,

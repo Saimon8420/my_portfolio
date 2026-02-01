@@ -48,6 +48,8 @@ interface Work {
   endDate: DateStr | null;
   summary: string;
   highlights: Highlight;
+  location?: string;
+  locationType?: string;
 }
 
 type DateStr = `${string}-${string}-${string}`;
