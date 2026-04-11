@@ -7,6 +7,17 @@ const username = githubProfile?.username ?? "Saimon8420";
 const chartUrl = `https://ghchart.rshah.org/${username}`;
 const profileUrl = `https://github.com/${username}`;
 
+// Curated allow-list of repos worth showing on the portfolio.
+// Everything else on GitHub (learning projects, forks, experiments) is hidden.
+const featuredRepos = new Set([
+  "al-quran-client-site",
+  "hadith_explorer",
+  "islamic-prayer-times",
+  "react_canvas",
+  "islamic_card_designer",
+  "islamic-prophets-stories",
+]);
+
 interface Repo {
   name: string;
   html_url: string;
@@ -46,10 +57,11 @@ let fetchError = false;
 
 try {
   const res = await fetch(
-    `https://api.github.com/users/${username}/repos?sort=pushed&per_page=30&type=public`,
+    `https://api.github.com/users/${username}/repos?sort=pushed&per_page=100&type=public`,
   );
   if (res.ok) {
-    repos = await res.json();
+    const all: Repo[] = await res.json();
+    repos = all.filter((r) => featuredRepos.has(r.name));
   } else {
     fetchError = true;
   }

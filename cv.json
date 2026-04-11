@@ -6,7 +6,7 @@
     "label": "Software Engineer",
     "image": "/avatar.jpg",
     "email": "latiful.dev@gmail.com",
-    "url": "",
+    "url": "https://my-portfolio-seven-delta-60.vercel.app",
     "summary": "I'm a full-stack software engineer who works across the JavaScript and Python ecosystems. Most of my day-to-day involves building with React, Next.js, and TypeScript on the frontend, and Node.js or FastAPI on the backend — depending on what the project calls for. I've spent a good amount of time working with authentication flows, particularly OAuth 2.0 and JWT-based systems, and I genuinely enjoy getting those right. On the data side, I work with PostgreSQL, MongoDB, and MySQL, usually through ORMs like Prisma or Drizzle. I've built products that serve tens of thousands of users, and more recently I've been working on AI-powered tools and third-party integrations. I started out writing C and Java, picked up the web stack along the way, and I'm currently exploring Rust and Go when I get the chance. I care about writing clean, practical code that actually solves problems — not just code that looks impressive.",
     "theme": "red",
     "location": {
@@ -62,7 +62,7 @@
       "url": "",
       "area": "Science",
       "studyType": "Secondary School Certificate (Science)",
-      "startDate": "2002",
+      "startDate": "2011",
       "endDate": "2013"
     }
   ],
@@ -145,15 +145,15 @@
     },
     {
       "name": "Python",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Java",
-      "level": "Intermediate"
+      "level": "Familiar"
     },
     {
       "name": "C",
-      "level": "Intermediate"
+      "level": "Familiar"
     },
     {
       "name": "React.js",
@@ -177,135 +177,135 @@
     },
     {
       "name": "Material UI",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Shadcn UI",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Chakra UI",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "DaisyUI",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Redux Toolkit",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "React Query",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Zustand",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Context API",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Node.js",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Express.js",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Bun.js",
-      "level": "Expert"
+      "level": "Familiar"
     },
     {
       "name": "Elysia.js",
-      "level": "Expert"
+      "level": "Familiar"
     },
     {
       "name": "FastAPI",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "PostgreSQL",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "MySQL",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "MongoDB",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Supabase",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Prisma",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Drizzle ORM",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Mongoose",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "JWT",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "OAuth 2.0",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "ClerkAuth",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Passport.js",
-      "level": "Expert"
+      "level": "Familiar"
     },
     {
       "name": "Docker",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "GitHub Actions",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Vercel",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Railway",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Render",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Firebase",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Jest",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "React Testing Library",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Postman",
-      "level": "Expert"
+      "level": "Advanced"
     },
     {
       "name": "Git",
@@ -317,23 +317,23 @@
     },
     {
       "name": "Figma",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Notion",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "VS Code",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Trello",
-      "level": "Expert"
+      "level": "Proficient"
     },
     {
       "name": "Slack",
-      "level": "Expert"
+      "level": "Proficient"
     }
   ],
   "languages": [
@@ -367,6 +367,25 @@
     }
   ],
   "projects": [
+    {
+      "name": "Doetra — AI SEO Article Generator",
+      "isActive": true,
+      "description": "Full-stack AI SaaS, built end-to-end as a solo developer, that generates SEO-optimized product review and informational articles with auto-generated images and one-click WordPress publishing. Live app at app.doetra.com with a Next.js marketing site at doetra.com.",
+      "highlights": [
+        "Five article generation flows: product Roundup reviews, Info (educational) articles, Outline-to-Article, plus bulk Roundup and bulk Info batch jobs with queue-based async processing and live status tracking.",
+        "AI text generation via OpenAI gpt-4o-mini; AI image generation via Together AI's Flux Schnell (black-forest-labs/FLUX.1-schnell) for featured images and up to 3 inline section images per article.",
+        "Live Amazon Creators API integration across 31 search indexes with in-stock filtering and per-site Amazon affiliate tag management.",
+        "Full WordPress integration supporting publish, schedule, and draft statuses, categories, featured images, and inline image uploads via the /wp-json/wp/v2 REST API. WordPress credentials encrypted at rest with AES-256-GCM.",
+        "Dual authentication: Google OAuth (@react-oauth/google on frontend, google-auth-library on backend) plus email/password with verification codes and password reset; JWT access tokens (15m) + refresh tokens (7d) in httpOnly cookies.",
+        "Abuse protection: Fingerprint.js device fingerprinting on signup, Redis-backed per-endpoint rate limiting (login, register, generate, bulk), Helmet security headers, and a CORS allow-list.",
+        "Frontend: React 19 + TypeScript + Vite + Redux Toolkit + Tailwind + Radix UI + Tiptap 3.20 rich-text editor with an AI-powered internal linking service between articles.",
+        "Admin panel covering user management, article moderation, API usage audit, bulk job monitoring, plan and credit-pack CRUD, an internal blog CMS, and an email campaign builder with reusable templates, variable substitution, and per-plan user targeting.",
+        "Billing via Stripe: subscription plans and one-time credit packs with signed webhooks, and configurable per-article-type credit costs (roundup, info, outline, per extra image) editable live from the admin dashboard.",
+        "Transactional email via Nodemailer + Hostinger SMTP for signup verification, password reset, and Stripe-webhook-triggered order confirmations.",
+        "Backend: Node.js + Express + MongoDB/Mongoose + Redis caching (24-hour TTL on Amazon search results), running in PM2 cluster mode (2 instances, 1 GB max memory) with Vercel-compatible serverless detection."
+      ],
+      "url": "https://app.doetra.com"
+    },
     {
       "name": "al-quran-client-site",
       "isActive": true,
@@ -425,37 +444,33 @@
       "url": "https://github.com/Saimon8420/react_canvas"
     },
     {
-      "name": "crowdFunding_FrontEnd",
+      "name": "islamic_card_designer",
       "isActive": true,
-      "description": "A front-end application for a crowdfunding platform, built with React and styled with vanilla CSS.",
+      "description": "Browser-based design tool for creating customizable Islamic greeting cards, inspired by Figma and Canva.",
       "highlights": [
-        "Implemented a responsive and interactive user interface for browsing and supporting projects.",
-        "Developed components for displaying project details, contribution tiers, and progress bars.",
-        "Managed application state using React hooks and context API."
+        "80+ pre-built templates for Eid ul-Fitr, Eid ul-Adha, Ramadan, Milad-un-Nabi, and other Islamic occasions, organized by style (Minimal, Floral, Geometric, Calligraphy).",
+        "Fabric.js-powered canvas editor with 15 aspect ratio presets, smart snapping guides, 10%–500% zoom, and 50-state undo/redo.",
+        "60+ geometric shapes, 300+ Lucide icons with real-time search, and a 20+ category asset library (mosques, lanterns, patterns, calligraphy).",
+        "Rich text editing with 49 Google Fonts via WebFontLoader; image filters including sepia, blur, grayscale, and duotone.",
+        "High-resolution export from HD (1280×720) up to 5K (5120×2880) in PNG, JPEG, and WebP.",
+        "Built with React 18 + Context API + Tailwind CSS + shadcn/ui, optimized with lazy-loaded panels, virtualized asset grids, and code-split bundles."
       ],
-      "url": "https://github.com/Saimon8420/crowdFunding_FrontEnd"
+      "url": "https://github.com/Saimon8420/islamic_card_designer"
     },
     {
-      "name": "flowerShop",
+      "name": "islamic-prophets-stories",
       "isActive": true,
-      "description": "A front-end for a demo flower shop website, built with React.",
+      "description": "Interactive app exploring the stories of the 25 Prophets of Islam, with verified references from the Quran, Ibn Kathir's Stories of the Prophets, and Sahih Hadith collections.",
       "highlights": [
-        "Designed and developed a visually appealing e-commerce interface for a flower shop.",
-        "Implemented features like product browsing, filtering, and a shopping cart.",
-        "Utilized React components for building a modular and reusable UI."
+        "Complete prophet narratives with authenticated source citations.",
+        "Quranic passages presented in Arabic alongside English translations.",
+        "Tri-lingual support: English, Bengali, and Arabic.",
+        "Dark/light theme, reading progress tracking, and bookmarks.",
+        "Full-content search and a historical timeline view.",
+        "Kids mode with simplified stories and quizzes.",
+        "Ships as both a Progressive Web App and a native Android app via Capacitor 7; built with React 19 + TypeScript + Vite 7 + Zustand + Radix UI."
       ],
-      "url": "https://github.com/Saimon8420/flowerShop"
-    },
-    {
-      "name": "space_tourism_site_FrontEnd",
-      "isActive": true,
-      "description": "A front-end for a space tourism website, built with React.",
-      "highlights": [
-        "Created an immersive and engaging user experience for a conceptual space tourism website.",
-        "Developed interactive elements to showcase destinations, crew, and technology.",
-        "Implemented a responsive design that works on a variety of devices."
-      ],
-      "url": "https://github.com/Saimon8420/space_tourism_site_FrontEnd"
+      "url": "https://github.com/Saimon8420/islamic-prophets-stories"
     }
   ]
 }
