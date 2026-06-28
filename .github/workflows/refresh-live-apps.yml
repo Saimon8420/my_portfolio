@@ -1,0 +1,26 @@
+# Rebuilds the portfolio daily so newly-deployed Vercel projects appear in the
+# auto "Live Apps" section without a manual redeploy.
+#
+# One-time setup:
+#   1. Vercel → portfolio project → Settings → Git → Deploy Hooks → create a hook
+#      (e.g. name "daily", branch "main"). Copy the URL.
+#   2. GitHub → this repo → Settings → Secrets and variables → Actions →
+#      New repository secret → name: VERCEL_DEPLOY_HOOK, value: <the hook URL>.
+name: Refresh Live Apps
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC
+  workflow_dispatch: {} # allow manual runs from the Actions tab
+
+jobs:
+  trigger-redeploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Vercel deploy hook
+        run: |
+          if [ -z "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
+            echo "VERCEL_DEPLOY_HOOK secret is not set — skipping."
+            exit 0
+          fi
+          curl -fsSL -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"

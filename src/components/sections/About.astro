@@ -1,12 +1,40 @@
 ---
 import Section from "../Section.astro";
+import { Icon } from "astro-icon/components";
 
 import CV from "@cv";
-const { summary } = CV.basics;
+const { summary, availability, highlights } = CV.basics;
 ---
 
 <Section title="About">
-  <p class="font-mono opacity-75 print:font-sans">
-    {summary}
-  </p>
+  <div class="flex flex-col gap-3">
+    {
+      availability && (
+        <span class="inline-flex w-fit items-center gap-2 rounded-full bg-skin-button-muted/60 px-3 py-1 text-xs font-medium text-skin-base ring-1 ring-skin-muted print:hidden">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75" />
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+          </span>
+          {availability}
+        </span>
+      )
+    }
+
+    <p class="font-mono text-sm leading-relaxed opacity-75 print:font-sans">
+      {summary}
+    </p>
+
+    {
+      highlights && highlights.length > 0 && (
+        <ul class="flex flex-col gap-1.5 print:hidden">
+          {highlights.map((item) => (
+            <li class="flex items-start gap-2 text-sm text-skin-muted">
+              <Icon name="ri:checkbox-circle-fill" class="mt-0.5 size-4 shrink-0 text-skin-hue" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
 </Section>

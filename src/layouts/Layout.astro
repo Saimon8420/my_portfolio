@@ -11,6 +11,15 @@ interface Props {
 const { title } = Astro.props;
 
 const { image, summary, url, theme } = CV.basics;
+
+// Absolute URL for social-share previews (og/twitter need a full URL).
+const ogImage = (() => {
+  try {
+    return new URL(image, url).toString();
+  } catch {
+    return image;
+  }
+})();
 ---
 
 <!doctype html>
@@ -20,20 +29,20 @@ const { image, summary, url, theme } = CV.basics;
     <title>{title}</title>
     <meta name="description" content={summary} />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/avatar.png" />
+    <link rel="icon" href={image} />
     <link rel="preload" as="image" href={image} />
     <meta property="og:url" content={url} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={summary} />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content={ogImage} />
     <meta name="referrer" content="no-referrer" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
     <meta property="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={summary} />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content={ogImage} />
     {CV?.analyticsCode && <script is:inline src={CV.analyticsCode} />}
   </head>
   <body data-theme={theme} class="relative bg-skin-fill font-sans">

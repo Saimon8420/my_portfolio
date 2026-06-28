@@ -44,7 +44,9 @@ const { city, region, address } = location;
           )
         }
         {
-          profiles.map(({ network, url, icon }) => {
+          profiles
+            .filter(({ network }) => network.toLowerCase() !== "email")
+            .map(({ network, url, icon }) => {
             return (
               <a
                 href={url}

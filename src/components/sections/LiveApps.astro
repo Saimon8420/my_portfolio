@@ -1,0 +1,230 @@
+---
+import Section from "../Section.astro";
+import { Icon } from "astro-icon/components";
+
+// Auto-showcase of everything deployed on Vercel. At BUILD time we hit the
+// Vercel REST API with a server-side token (never shipped to the browser),
+// keep only the public-facing apps (deny-list below), and render a card per
+// project with a live screenshot. New deployments appear on the next build —
+// a daily Vercel Cron deploy-hook keeps it fresh. See README "Live Apps".
+const token = import.meta.env.VERCEL_TOKEN ?? process.env.VERCEL_TOKEN;
+const teamId = import.meta.env.VERCEL_TEAM_ID ?? process.env.VERCEL_TEAM_ID; // optional, only for team accounts
+
+// Hide infra / non-showcase projects. Future *tools* show up automatically;
+// only add things here that should stay hidden.
+const DENY = new Set<string>([
+  // the portfolio itself
+  "my-portfolio",
+  "my_portfolio",
+  "portfolio-dev",
+  "portfolio",
+  // Doetra preview deploys — already featured as a curated project (app.doetra.com)
+  "doetra-amazon-article",
+  "doetra-amazon-article-fe",
+  "doetra",
+  "doetra-be",
+  "seo-article-generator",
+  // duplicate deployments of an app kept elsewhere
+  "al-quran-client-site-e1g4",
+  // practice / clone / experiment deploys
+  "v0-excali-draw-clone",
+  "user-auth-with-todo-front-end-yxhw",
+  "space-tourism-site-front-end-6kfr",
+  // practice / throwaway projects
+  "chat-app",
+  "weathergpt",
+  // misc
+  "localshare-server",
+  "gist", // paused / not a finished tool
+]);
+// Also hide anything that looks like a backend service.
+const looksLikeBackend = (name: string) => /-(server|backend|api|be)$/i.test(name) || /backend/i.test(name);
+
+interface VercelProject {
+  name: string;
+  framework?: string | null;
+  updatedAt?: number;
+  targets?: {
+    production?: { alias?: string[]; url?: string } | null;
+  };
+}
+
+interface App {
+  name: string;
+  pretty: string;
+  url: string;
+  framework: string | null;
+  updatedAt: number;
+}
+
+const prettify = (n: string) =>
+  n
+    // drop a trailing random Vercel suffix like "-1fgk" (4 chars incl. a digit)
+    .replace(/-[a-z0-9]{4}$/i, (m) => (/\d/.test(m) ? "" : m))
+    .replace(/[-_]/g, " ")
+    .replace(/\b\w/g, (c) => c.toUpperCase());
+
+// Pick the cleanest production URL: a custom domain if one exists, else the
+// .vercel.app alias, else the raw deployment URL.
+function productionUrl(p: VercelProject): string | null {
+  const t = p.targets?.production;
+  if (!t) return null;
+  const aliases = t.alias ?? [];
+  const custom = aliases.find((a) => !a.endsWith(".vercel.app"));
+  const vercel = aliases.find((a) => a.endsWith(".vercel.app"));
+  const host = custom ?? vercel ?? t.url;
+  if (!host) return null;
+  return host.startsWith("http") ? host : `https://${host}`;
+}
+
+const thumb = (url: string) =>
+  `https://image.thum.io/get/width/600/crop/450/noanimate/${url}`;
+
+let apps: App[] = [];
+
+if (token) {
+  try {
+    const qs = teamId ? `?teamId=${teamId}&limit=100` : "?limit=100";
+    const res = await fetch(`https://api.vercel.com/v9/projects${qs}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (res.ok) {
+      const data: { projects: VercelProject[] } = await res.json();
+      apps = data.projects
+        .filter((p) => !DENY.has(p.name) && !looksLikeBackend(p.name))
+        .map((p) => {
+          const url = productionUrl(p);
+          return url
+            ? {
+                name: p.name,
+                pretty: prettify(p.name),
+                url,
+                framework: p.framework ?? null,
+                updatedAt: p.updatedAt ?? 0,
+              }
+            : null;
+        })
+        .filter((a): a is App => a !== null)
+        .sort((a, b) => b.updatedAt - a.updatedAt);
+    }
+  } catch {
+    /* leave apps empty — section hides itself */
+  }
+} else if (import.meta.env.DEV) {
+  // Local preview without a token: a few real deployments so the layout is
+  // verifiable. Production builds with no token simply hide the section.
+  apps = [
+    { name: "memely", pretty: "Memely", url: "https://memely-nine.vercel.app", framework: "vite", updatedAt: 5 },
+    { name: "hueology", pretty: "Hueology", url: "https://hueology.vercel.app", framework: "vite", updatedAt: 4 },
+    { name: "crossly", pretty: "Crossly", url: "https://crossly-smoky.vercel.app", framework: "vite", updatedAt: 3 },
+    { name: "squish", pretty: "Squish", url: "https://squish-nine.vercel.app", framework: "vite", updatedAt: 2 },
+    { name: "qrio", pretty: "Qrio", url: "https://qrio-alpha.vercel.app", framework: "vite", updatedAt: 1 },
+    { name: "billd", pretty: "Billd", url: "https://billd-xi.vercel.app", framework: "vite", updatedAt: 0 },
+  ];
+}
+---
+
+{
+  apps.length > 0 && (
+    <Section
+      className={`print:hidden ${Astro.props.className ?? ""}`}
+      title="Live Apps"
+    >
+      <p class="-mt-2 text-sm text-skin-muted">
+        {apps.length} apps deployed on Vercel — auto-updated from my account.
+      </p>
+      <div id="liveapps-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {apps.map((app) => (
+          <a
+            href={app.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex flex-col overflow-hidden rounded-md bg-skin-button-muted/50 shadow-sm ring-1 ring-skin-muted transition-colors hover:ring-skin-hue"
+          >
+            <div class="aspect-[4/3] w-full overflow-hidden border-b border-skin-muted bg-skin-fill">
+              <img
+                src={thumb(app.url)}
+                alt={`Screenshot of ${app.pretty}`}
+                loading="lazy"
+                class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+              />
+            </div>
+            <div class="flex items-center justify-between gap-2 p-4">
+              <div class="min-w-0">
+                <span class="block truncate text-base font-medium text-skin-base group-hover:text-skin-hue">
+                  {app.pretty}
+                </span>
+                {app.framework && (
+                  <span class="text-xs capitalize text-skin-muted">{app.framework}</span>
+                )}
+              </div>
+              <span class="shrink-0 text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                <Icon name="ri:arrow-up-line" class="rotate-45" />
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <nav
+        id="liveapps-pager"
+        class="mt-6 flex flex-wrap items-center justify-center gap-1.5 print:hidden"
+        aria-label="Live Apps pagination"
+      />
+    </Section>
+  )
+}
+
+<script>
+  // Client-side pagination over the build-time-rendered cards (keeps every card
+  // in the static HTML for SEO; just shows one page at a time).
+  const PAGE_SIZE = 9;
+  const grid = document.getElementById("liveapps-grid");
+  const pager = document.getElementById("liveapps-pager");
+
+  if (grid && pager) {
+    const cards = Array.from(grid.children) as HTMLElement[];
+    const pageCount = Math.ceil(cards.length / PAGE_SIZE);
+    let page = 1;
+
+    const showPage = (p: number) => {
+      page = Math.min(Math.max(1, p), pageCount);
+      cards.forEach((card, i) => {
+        card.hidden = Math.floor(i / PAGE_SIZE) + 1 !== page;
+      });
+      renderPager();
+    };
+
+    const mkButton = (label: string, target: number, opts: { active?: boolean; disabled?: boolean } = {}) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = label;
+      b.disabled = !!opts.disabled;
+      b.className = [
+        "min-w-9 rounded-md px-3 py-1.5 text-sm ring-1 transition-colors",
+        opts.active
+          ? "bg-skin-button-muted text-skin-base ring-skin-hue"
+          : "text-skin-muted ring-skin-muted hover:text-skin-base hover:ring-skin-hue",
+        opts.disabled ? "cursor-not-allowed opacity-40 hover:ring-skin-muted" : "",
+      ].join(" ");
+      if (!opts.disabled && !opts.active)
+        b.addEventListener("click", () => {
+          showPage(target);
+          grid.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      return b;
+    };
+
+    function renderPager() {
+      if (!pager) return;
+      pager.innerHTML = "";
+      if (pageCount <= 1) return;
+      pager.appendChild(mkButton("‹ Prev", page - 1, { disabled: page === 1 }));
+      for (let p = 1; p <= pageCount; p++) {
+        pager.appendChild(mkButton(String(p), p, { active: p === page }));
+      }
+      pager.appendChild(mkButton("Next ›", page + 1, { disabled: page === pageCount }));
+    }
+
+    showPage(1);
+  }
+</script>

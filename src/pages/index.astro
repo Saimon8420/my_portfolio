@@ -5,6 +5,7 @@ import About from "@/components/sections/About.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Projects from "@/components/sections/Projects.astro";
+import LiveApps from "@/components/sections/LiveApps.astro";
 import GitHub from "@/components/sections/GitHub.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Tail from "@/components/sections/Tail.astro";
@@ -21,7 +22,7 @@ enum PageLayout {
 }
 ---
 
-<Layout title={`${name}'s' Portfolio - ${label}`}>
+<Layout title={`${name}'s Portfolio - ${label}`}>
   <main
     class="relative grid h-full max-w-7xl gap-12 p-8 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6"
   >
@@ -52,6 +53,7 @@ enum PageLayout {
             class="slide-enter-content space-y-12 md:col-span-6 print:col-span-1 print:space-y-0"
             style="--enter-initial: 1200ms"
           >
+            <LiveApps className="print:hidden" />
             <Projects className="print:hidden" />
             <Skills className="print:hidden" />
             <GitHub />

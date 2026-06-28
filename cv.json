@@ -8,6 +8,7 @@
     "email": "latiful.dev@gmail.com",
     "url": "https://my-portfolio-seven-delta-60.vercel.app",
     "summary": "I'm a full-stack software engineer who works across the JavaScript and Python ecosystems. Most of my day-to-day involves building with React, Next.js, and TypeScript on the frontend, and Node.js or FastAPI on the backend — depending on what the project calls for. I've spent a good amount of time working with authentication flows, particularly OAuth 2.0 and JWT-based systems, and I genuinely enjoy getting those right. On the data side, I work with PostgreSQL, MongoDB, and MySQL, usually through ORMs like Prisma or Drizzle. I've built products that serve tens of thousands of users, and more recently I've been working on AI-powered tools and third-party integrations. I started out writing C and Java, picked up the web stack along the way, and I'm currently exploring Rust and Go when I get the chance. I care about writing clean, practical code that actually solves problems — not just code that looks impressive.",
+    "availability": "Open to new opportunities",
     "theme": "red",
     "location": {
       "address": "Khilkhet",
