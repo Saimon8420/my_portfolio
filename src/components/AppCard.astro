@@ -1,0 +1,52 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  pretty: string;
+  url: string;
+  thumb: string;
+  blurb?: string | null;
+  framework?: string | null;
+  tags?: string[];
+}
+
+const { pretty, url, thumb, blurb, framework, tags } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group flex flex-col overflow-hidden rounded-md bg-skin-button-muted/50 shadow-sm ring-1 ring-skin-muted transition-colors hover:ring-skin-hue"
+>
+  <div class="aspect-[4/3] w-full overflow-hidden border-b border-skin-muted bg-skin-fill">
+    <img
+      src={thumb}
+      alt={`Screenshot of ${pretty}`}
+      loading="lazy"
+      class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
+    />
+  </div>
+  <div class="flex flex-1 flex-col gap-2 p-4">
+    <div class="flex items-center justify-between gap-2">
+      <span class="block truncate text-base font-medium text-skin-base group-hover:text-skin-hue">
+        {pretty}
+      </span>
+      <span class="shrink-0 text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+        <Icon name="ri:arrow-up-line" class="rotate-45" />
+      </span>
+    </div>
+    {blurb && <p class="line-clamp-3 text-sm text-skin-muted">{blurb}</p>}
+    {
+      tags && tags.length > 0 ? (
+        <div class="mt-auto flex flex-wrap gap-1.5 pt-1">
+          {tags.map((t) => (
+            <span class="rounded bg-skin-button-muted px-1.5 py-0.5 text-[11px] text-skin-muted">{t}</span>
+          ))}
+        </div>
+      ) : framework ? (
+        <span class="mt-auto pt-1 text-xs capitalize text-skin-muted">{framework}</span>
+      ) : null
+    }
+  </div>
+</a>

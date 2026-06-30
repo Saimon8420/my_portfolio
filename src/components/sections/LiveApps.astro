@@ -1,10 +1,11 @@
 ---
 import Section from "../Section.astro";
-import { Icon } from "astro-icon/components";
+import AppCard from "../AppCard.astro";
 
 // Auto-showcase of everything deployed on Vercel. At BUILD time we hit the
 // Vercel REST API with a server-side token (never shipped to the browser),
-// keep only the public-facing apps (deny-list below), and render a card per
+// keep only the public-facing apps (deny-list below), attach curated details
+// from META, split backend APIs into their own section, and render a card per
 // project with a live screenshot. New deployments appear on the next build —
 // a daily Vercel Cron deploy-hook keeps it fresh. See README "Live Apps".
 const token = import.meta.env.VERCEL_TOKEN ?? process.env.VERCEL_TOKEN;
@@ -30,6 +31,7 @@ const DENY = new Set<string>([
   "v0-excali-draw-clone",
   "user-auth-with-todo-front-end-yxhw",
   "space-tourism-site-front-end-6kfr",
+  "react-canvas-1fgk",
   // practice / throwaway projects
   "chat-app",
   "weathergpt",
@@ -37,8 +39,86 @@ const DENY = new Set<string>([
   "localshare-server",
   "gist", // paused / not a finished tool
 ]);
-// Also hide anything that looks like a backend service.
-const looksLikeBackend = (name: string) => /-(server|backend|api|be)$/i.test(name) || /backend/i.test(name);
+
+// Also hide anything that looks like a backend *service* (signalling apps etc.).
+const looksLikeBackend = (name: string) => /-(server|backend|be)$/i.test(name) || /backend/i.test(name);
+
+// Curated per-project details. `category: "api"` forces a project into the
+// Backend APIs section; otherwise APIs are detected automatically by framework
+// (Express). A project with no entry here still appears — just with its
+// framework label instead of a blurb. Keys must match the Vercel project slug.
+type Meta = { category?: "api"; blurb?: string; tags?: string[] };
+const META: Record<string, Meta> = {
+  // ---- Backend APIs -------------------------------------------------------
+  astraea: {
+    category: "api",
+    blurb:
+      "Free public astrology API — natal birth charts, planetary positions, houses, aspects, transits, synastry, composite & solar-return charts, all with built-in interpretations. Pure-computation engine, no data feeds.",
+    tags: ["Express", "TypeScript", "OpenAPI", "astronomy-engine"],
+  },
+  horizon: {
+    category: "api",
+    blurb:
+      "Free public Sun & Moon REST API — sunrise/sunset, the full twilight set, golden & blue hour, solar position, day length, plus moonrise/set, illumination, phase and upcoming phase forecasts.",
+    tags: ["Express", "TypeScript", "OpenAPI", "SunCalc"],
+  },
+  miqaat: {
+    category: "api",
+    blurb:
+      "Free public Islamic prayer-times & fasting API — prayer & fasting schedule, Hijri calendar, Qibla direction, makruh windows and Islamic event countdowns.",
+    tags: ["Express", "TypeScript", "OpenAPI", "adhan"],
+  },
+
+  // ---- Generators & creative tools ---------------------------------------
+  memely: { blurb: "Meme maker — caption any image with classic top/bottom Impact text, drag unlimited captions, export full-res PNG." },
+  hueology: { blurb: "Color-palette studio — pull palettes from a photo, build harmonies, check WCAG contrast, export CSS/Tailwind/SCSS/JSON/SVG/PNG." },
+  hue: { blurb: "Photo → coloring page — edge-detect any photo into clean black line art and export PNG/ZIP or a printable PDF." },
+  crossly: { blurb: "Crossword maker — type clue/answer pairs and it interlocks them into a real numbered crossword with a printable puzzle + answer key." },
+  wordsy: { blurb: "Word-search puzzle maker — turn a word list into a grid (reverse & diagonal placement) and a printable PDF with answer key." },
+  inkly: { blurb: "Handwriting → font — draw the glyphs and download a real, installable .ttf you can use anywhere." },
+  flippy: { blurb: "Flashcards & quizzes — build decks, study with 3D flip cards, and test yourself with auto-generated multiple-choice quizzes." },
+  wordly: { blurb: "Word-cloud maker — paste text for a weighted cloud with 24 fonts, custom palettes, multiple shapes and PNG export." },
+  ogle: { blurb: "Social / OG image generator — turn a title into a polished 1200×630 share card with templates, gradients and fonts." },
+  quotely: { blurb: "Quote-card maker — turn text into a shareable social card; 6 formats, 24 fonts, gradient or photo backgrounds." },
+  tierly: { blurb: "Tier-list maker — drag image and text tiles into S/A/B/C tiers and export the board as an image." },
+  bezel: { blurb: "Device-frame mockups — drop a screenshot into iPhone/Android/Mac/browser frames and export a clean mockup." },
+  qrio: { blurb: "Custom QR maker — URL/WiFi/vCard/email QR codes with colors, dot styles and a center logo; PNG/SVG export." },
+  chirp: { blurb: "Tweet & chat screenshot beautifier — craft tweet cards and chat threads (iMessage/WhatsApp/Telegram…) and export as images." },
+  sticka: { blurb: "Sticker-pack maker — cut out subjects with in-browser AI, add a die-cut outline, export WhatsApp/Telegram .webp packs." },
+  tabby: { blurb: "Favicon generator — turn one image into a full favicon pack (multi-res ICO, PNGs, apple-touch, manifest, HTML snippet)." },
+  snippy: { blurb: "Code-screenshot maker — turn a code snippet into a beautiful image with 38 themes; export PNG or copy to clipboard." },
+  billd: { blurb: "Invoice generator — build a clean, branded invoice with live A4 preview and real PDF export across 20 currencies." },
+
+  // ---- In-browser AI tools ------------------------------------------------
+  poof: { blurb: "Background remover — erase image backgrounds in one click with in-browser AI; export a clean transparent PNG." },
+  pulse: { blurb: "Sentiment analyzer — paste reviews for POSITIVE/NEGATIVE breakdowns and a summary, running entirely in your browser." },
+  crux: { blurb: "Text summarizer — paste an article and get a short/medium/long summary, all in-browser, nothing uploaded." },
+  askdoc: { blurb: "Document Q&A — paste text, ask a question, get the exact answer span highlighted in the source. In-browser AI." },
+  doppel: { blurb: "Duplicate-photo finder — cluster near-identical photos with in-browser AI, keep the best, export a delete list." },
+  sift: { blurb: "Semantic file search — upload files and search across them by meaning with ranked passages. In-browser embeddings." },
+  capsy: { blurb: "Auto-captioner — transcribe video with in-browser Whisper and burn subtitles into a shareable MP4." },
+  vanish: { blurb: "Object eraser — paint over anything in a photo and in-browser AI inpaints it away; PNG/JPG/WebP export." },
+  embiggen: { blurb: "Image upscaler — sharpen and enlarge photos 2×/4× with in-browser Real-ESRGAN AI, no upload." },
+  aloud: { blurb: "Text-to-speech — natural multilingual voices in-browser (Piper); play with sentence highlighting and export WAV/MP3." },
+
+  // ---- Image & file utilities --------------------------------------------
+  squish: { blurb: "Image compressor — shrink images in-browser (quality/resize/convert WebP/JPEG/PNG) in batches with zip download." },
+  scrub: { blurb: "Metadata stripper — remove EXIF/location data from images losslessly, in batches with zip." },
+  glean: { blurb: "OCR — extract text from images and PDFs in-browser (30 languages incl. Bengali), batch + zip." },
+  unheic: { blurb: "HEIC converter — convert iPhone HEIC photos to JPG/PNG in-browser, in batches with a quality slider." },
+  stamp: { blurb: "Photo watermarker — add text or logo watermarks (positioned or tiled) with live preview, batch + zip." },
+  vexel: { blurb: "Image vectorizer — trace a raster image into clean SVG in-browser with adjustable detail." },
+  smudge: { blurb: "Face & plate blur — auto-detect and blur faces (or draw your own regions); pixelate/blur/solid with undo-redo." },
+  morph: { blurb: "Data converter — convert between JSON/CSV/YAML and auto-generate TypeScript types, all in-browser." },
+  quill: { blurb: "PDF sign & fill — fill forms, sign, redact, markup and reorder/merge pages: a full in-browser PDF editor." },
+
+  // ---- Islamic apps -------------------------------------------------------
+  "al-quran-client-site": { blurb: "Al-Quran reader — browse and read the Holy Quran in a clean, fast client-side app." },
+  "hadith-explorer": { blurb: "Hadith Explorer — browse and search hadith collections in a quick client-side reader." },
+  "islamic-prayer-times": { blurb: "Prayer Times — a client-side Islamic prayer & fasting schedule (the app the Miqaat API was derived from)." },
+  "islamic-prophets-stories": { blurb: "Prophets' Stories — read the stories of the prophets in a clean, distraction-free app." },
+  "islamic-card-designer": { blurb: "Islamic card designer — create and export Eid & Islamic greeting cards in the browser." },
+};
 
 interface VercelProject {
   name: string;
@@ -55,6 +135,9 @@ interface App {
   url: string;
   framework: string | null;
   updatedAt: number;
+  blurb: string | null;
+  tags?: string[];
+  isApi: boolean;
 }
 
 const prettify = (n: string) =>
@@ -80,6 +163,22 @@ function productionUrl(p: VercelProject): string | null {
 const thumb = (url: string) =>
   `https://image.thum.io/get/width/600/crop/450/noanimate/${url}`;
 
+function toApp(p: VercelProject): App | null {
+  const url = productionUrl(p);
+  if (!url) return null;
+  const meta = META[p.name];
+  return {
+    name: p.name,
+    pretty: prettify(p.name),
+    url,
+    framework: p.framework ?? null,
+    updatedAt: p.updatedAt ?? 0,
+    blurb: meta?.blurb ?? null,
+    tags: meta?.tags,
+    isApi: meta?.category === "api" || p.framework === "express",
+  };
+}
+
 let apps: App[] = [];
 
 if (token) {
@@ -92,77 +191,66 @@ if (token) {
       const data: { projects: VercelProject[] } = await res.json();
       apps = data.projects
         .filter((p) => !DENY.has(p.name) && !looksLikeBackend(p.name))
-        .map((p) => {
-          const url = productionUrl(p);
-          return url
-            ? {
-                name: p.name,
-                pretty: prettify(p.name),
-                url,
-                framework: p.framework ?? null,
-                updatedAt: p.updatedAt ?? 0,
-              }
-            : null;
-        })
+        .map(toApp)
         .filter((a): a is App => a !== null)
         .sort((a, b) => b.updatedAt - a.updatedAt);
     }
   } catch {
-    /* leave apps empty — section hides itself */
+    /* leave apps empty — sections hide themselves */
   }
 } else if (import.meta.env.DEV) {
   // Local preview without a token: a few real deployments so the layout is
   // verifiable. Production builds with no token simply hide the section.
   apps = [
-    { name: "memely", pretty: "Memely", url: "https://memely-nine.vercel.app", framework: "vite", updatedAt: 5 },
-    { name: "hueology", pretty: "Hueology", url: "https://hueology.vercel.app", framework: "vite", updatedAt: 4 },
-    { name: "crossly", pretty: "Crossly", url: "https://crossly-smoky.vercel.app", framework: "vite", updatedAt: 3 },
-    { name: "squish", pretty: "Squish", url: "https://squish-nine.vercel.app", framework: "vite", updatedAt: 2 },
-    { name: "qrio", pretty: "Qrio", url: "https://qrio-alpha.vercel.app", framework: "vite", updatedAt: 1 },
-    { name: "billd", pretty: "Billd", url: "https://billd-xi.vercel.app", framework: "vite", updatedAt: 0 },
-  ];
+    { name: "astraea", framework: "express", updatedAt: 9 },
+    { name: "horizon", framework: "express", updatedAt: 8 },
+    { name: "miqaat", framework: "express", updatedAt: 7 },
+    { name: "memely", framework: "vite", updatedAt: 5 },
+    { name: "hueology", framework: "vite", updatedAt: 4 },
+    { name: "crossly", framework: "vite", updatedAt: 3 },
+    { name: "squish", framework: "vite", updatedAt: 2 },
+    { name: "qrio", framework: "vite", updatedAt: 1 },
+    { name: "billd", framework: "vite", updatedAt: 0 },
+  ]
+    .map((p) =>
+      toApp({
+        name: p.name,
+        framework: p.framework,
+        updatedAt: p.updatedAt,
+        targets: { production: { alias: [`${p.name}.vercel.app`] } },
+      }),
+    )
+    .filter((a): a is App => a !== null);
 }
+
+const apiApps = apps.filter((a) => a.isApi);
+const liveApps = apps.filter((a) => !a.isApi);
 ---
 
 {
-  apps.length > 0 && (
-    <Section
-      className={`print:hidden ${Astro.props.className ?? ""}`}
-      title="Live Apps"
-    >
+  apiApps.length > 0 && (
+    <Section className={`print:hidden ${Astro.props.className ?? ""}`} title="Backend APIs">
       <p class="-mt-2 text-sm text-skin-muted">
-        {apps.length} apps deployed on Vercel — auto-updated from my account.
+        {apiApps.length} free, public, no-key REST APIs — documented with OpenAPI, deployed on Vercel.
+      </p>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {apiApps.map((app) => (
+          <AppCard pretty={app.pretty} url={app.url} thumb={thumb(app.url)} blurb={app.blurb} tags={app.tags} framework={app.framework} />
+        ))}
+      </div>
+    </Section>
+  )
+}
+
+{
+  liveApps.length > 0 && (
+    <Section className="print:hidden" title="Live Apps">
+      <p class="-mt-2 text-sm text-skin-muted">
+        {liveApps.length} apps deployed on Vercel — auto-updated from my account.
       </p>
       <div id="liveapps-grid" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {apps.map((app) => (
-          <a
-            href={app.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="group flex flex-col overflow-hidden rounded-md bg-skin-button-muted/50 shadow-sm ring-1 ring-skin-muted transition-colors hover:ring-skin-hue"
-          >
-            <div class="aspect-[4/3] w-full overflow-hidden border-b border-skin-muted bg-skin-fill">
-              <img
-                src={thumb(app.url)}
-                alt={`Screenshot of ${app.pretty}`}
-                loading="lazy"
-                class="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.03]"
-              />
-            </div>
-            <div class="flex items-center justify-between gap-2 p-4">
-              <div class="min-w-0">
-                <span class="block truncate text-base font-medium text-skin-base group-hover:text-skin-hue">
-                  {app.pretty}
-                </span>
-                {app.framework && (
-                  <span class="text-xs capitalize text-skin-muted">{app.framework}</span>
-                )}
-              </div>
-              <span class="shrink-0 text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                <Icon name="ri:arrow-up-line" class="rotate-45" />
-              </span>
-            </div>
-          </a>
+        {liveApps.map((app) => (
+          <AppCard pretty={app.pretty} url={app.url} thumb={thumb(app.url)} blurb={app.blurb} tags={app.tags} framework={app.framework} />
         ))}
       </div>
       <nav
