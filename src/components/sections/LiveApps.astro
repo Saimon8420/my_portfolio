@@ -80,6 +80,12 @@ const META: Record<string, Meta> = {
       "Free public astronomy API — planetary positions, rise/set & transit times, twilight, Moon phases, solar & lunar eclipse prediction (global + local visibility), equinoxes & solstices, plus conjunctions & greatest elongations. Pure-computation engine, no data feeds.",
     tags: ["Express", "TypeScript", "OpenAPI", "astronomy-engine"],
   },
+  vitals: {
+    category: "api",
+    blurb:
+      "Free public clinical-calculators & medical-scores API — BMI/BSA, kidney function (eGFR, creatinine clearance), ASCVD cardiac risk, electrolyte & acid-base labs, GCS & APGAR scores, obstetric dating, and weight/BSA drug dosing. Validated published formulas; every response carries a not-medical-advice disclaimer.",
+    tags: ["Express", "TypeScript", "OpenAPI", "zod"],
+  },
 
   // ---- Generators & creative tools ---------------------------------------
   memely: { blurb: "Meme maker — caption any image with classic top/bottom Impact text, drag unlimited captions, export full-res PNG." },
@@ -214,6 +220,7 @@ if (token) {
   // Local preview without a token: a few real deployments so the layout is
   // verifiable. Production builds with no token simply hide the section.
   apps = [
+    { name: "vitals", framework: "express", updatedAt: 12 },
     { name: "orrery", framework: "express", updatedAt: 11 },
     { name: "rave", framework: "express", updatedAt: 10 },
     { name: "astraea", framework: "express", updatedAt: 9 },
