@@ -74,6 +74,12 @@ const META: Record<string, Meta> = {
       "Free public Human Design API — full BodyGraph (Type, Authority, Profile, Centers, Channels, the 64 Gates, Definition & Incarnation Cross) from birth data, plus two-person connection charts, live transits and interpretations.",
     tags: ["Express", "TypeScript", "OpenAPI", "astronomy-engine"],
   },
+  orrery: {
+    category: "api",
+    blurb:
+      "Free public astronomy API — planetary positions, rise/set & transit times, twilight, Moon phases, solar & lunar eclipse prediction (global + local visibility), equinoxes & solstices, plus conjunctions & greatest elongations. Pure-computation engine, no data feeds.",
+    tags: ["Express", "TypeScript", "OpenAPI", "astronomy-engine"],
+  },
 
   // ---- Generators & creative tools ---------------------------------------
   memely: { blurb: "Meme maker — caption any image with classic top/bottom Impact text, drag unlimited captions, export full-res PNG." },
@@ -208,6 +214,7 @@ if (token) {
   // Local preview without a token: a few real deployments so the layout is
   // verifiable. Production builds with no token simply hide the section.
   apps = [
+    { name: "orrery", framework: "express", updatedAt: 11 },
     { name: "rave", framework: "express", updatedAt: 10 },
     { name: "astraea", framework: "express", updatedAt: 9 },
     { name: "horizon", framework: "express", updatedAt: 8 },
